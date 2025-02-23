@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.12-slim-bullseye
+ARG PYTHON_VERSION=3.12-slim
 
 FROM python:${PYTHON_VERSION}
 
@@ -18,4 +18,4 @@ COPY . /code
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "worksample.wsgi"]
+CMD ["gunicorn","--bind",":8000","--workers","2","worksample.wsgi"]
